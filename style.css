@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+.homePage{
+    background-color: rgb(27, 24, 24);
+    padding: 20px 30px 200px 80px;
+    margin: -15px;
+}
+.links > a{
+    text-decoration: none;
+    color: white;
+    padding: 20px 30px;
+    margin-top: -60px;
+}
+.links{
+    display: flex;
+    margin-left: 1000px;
+}
+.links > a:hover{
+    color: darkorange;
+}
+a:active{
+    color: darkorange;
+}
+i{
+    color: darkorange;
+    margin-right: 25px;
+}
+.content{
+    margin-top: 200px;
+    display: flex;
+}
+.image{
+    position: relative;
+    border: none;
+    border-top-right-radius: 30%;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    background-color: darkorange;
+    width: 370px;
+    height: 300px;
+    margin-left: 370px;
+}
+.image > img{
+    position: absolute;
+    margin-left: 35px;
+    margin-top: 45px;
+}
+.name{
+    font-size: 50px;
+}
+button{
+    background-color: darkorange;
+    border: none;
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+div > a{
+    text-decoration: none;
+    color: white;
+}
+.aboutPage{
+    display: flex;
+    
+}
+.aboutMe{
+    margin-left: 400px;
+}
+.aboutImage > img{
+    position: absolute;
+    margin-left: 35px;
+    margin-top: 45px;
+}
+.aboutImage{
+    position: relative;
+    border: none;
+    border-top-right-radius: 30%;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    background-color: darkorange;
+    width: 720px;
+    height: 300px;
+}
+video{
+    margin: 40px 0 0 450px;
+}
+#about{
+    background-color: black;
+    padding: 250px 30px 270px 80px;
+    margin: -16px;
+}
+#contact{
+    background-color: black;
+    padding: 110px 30px 60px 80px;
+    margin: -16px;
+    text-align: center;
+}
+#contact > h1{
+    margin-bottom: 20px;
+}
+span{
+    color: darkorange;
+}
+input{
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(39, 37, 37);
+    padding: 15px;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+input:hover{
+    border: 2px solid darkorange;
+}
+textarea:hover{
+    border: 2px solid darkorange;
+}
+textarea{
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(39, 37, 37);
+    padding: 15px;
+    font-size: 25px;
+}
+#service{
+    background-color: rgb(39, 37, 37);
+    padding: 190px 30px 185px 30px;
+    margin: -16px;
+    text-align: center;
+}
+.container{
+    border-radius: 20px;
+    background-color: black;
+    margin: 20px;
+    padding: 30px;
+}
+.card{
+    display: flex;
+    margin: auto;
+}
+.container:hover{
+    box-shadow: 0 0 10px darkorange;
+    transition: 0.5s;
+    border: 3px solid darkorange;
+}
