@@ -8,6 +8,16 @@ body{
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
 }
+nav{
+    position: fixed;
+    background-color: rgb(27, 24, 24);
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 70px;
+    z-index: 100;
+}
 .homePage{
     background-color: rgb(27, 24, 24);
     padding: 20px 30px 200px 80px;
@@ -93,9 +103,6 @@ div > a{
     width: 720px;
     height: 300px;
 }
-video{
-    margin: 40px 0 0 450px;
-}
 #about{
     background-color: black;
     padding: 250px 30px 270px 80px;
@@ -116,7 +123,7 @@ span{
 input{
     border: none;
     border-radius: 20px;
-    background-color: rgb(39, 37, 37);
+    background-color: rgb(27, 24, 24);
     padding: 15px;
     font-size: 25px;
     margin-bottom: 20px;
@@ -130,12 +137,12 @@ textarea:hover{
 textarea{
     border: none;
     border-radius: 20px;
-    background-color: rgb(39, 37, 37);
+    background-color: rgb(27, 24, 24);
     padding: 15px;
     font-size: 25px;
 }
 #service{
-    background-color: rgb(39, 37, 37);
+    background-color: rgb(27, 24, 24);
     padding: 190px 30px 185px 30px;
     margin: -16px;
     text-align: center;
@@ -154,4 +161,15 @@ textarea{
     box-shadow: 0 0 10px darkorange;
     transition: 0.5s;
     border: 3px solid darkorange;
+}
+footer{
+    background-color: rgb(27, 24, 24);
+    margin: -15px;
+    padding: 10px 30px;
+}
+.contact > span{
+    border: 1px solid black;
+    background-color: darkorange;
+    float: right;
+    width: 30px;
 }
