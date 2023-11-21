@@ -1,22 +1,28 @@
 const nameElement = document.getElementById('MyWorks');
-const name = 'Web developer'; // Replace with your desired name
+const names = ['Web Developer', 'Front-End Developer', 'Graphic Designer', 'Shoe Maker', 'Footballer']; // Replace with your desired name
 let currentIndex = 0;
+let currentLetterIndex = 0;
 
-function writeName() {
-    if (currentIndex < name.length) {
-        nameElement.textContent += name.charAt(currentIndex);
-        currentIndex++;
-        setTimeout(writeName, 200); // Adjust the delay between characters
+function writeAndClearName() {
+    const currentName = names[currentIndex];
+    if (currentLetterIndex < currentName.length) {
+        nameElement.textContent += currentName.charAt(currentLetterIndex);
+        currentLetterIndex++;
+        setTimeout(writeAndClearName, 100); // Adjust the delay between letters
     } else {
-        setTimeout(clearName, 1000); // Adjust the delay before clearing
+        // Clear the name after a delay
+        setTimeout(() => {
+            nameElement.textContent = '';
+            currentLetterIndex = 0;
+            // Move to the next name
+            currentIndex++;
+            if (currentIndex === names.length) {
+                currentIndex = 0;
+            }
+            // Repeat the process
+            setTimeout(writeAndClearName, 1000); // Adjust the delay before the next name
+        }, 500); // Adjust the delay before clearing the name
     }
 }
 
-function clearName() {
-    nameElement.textContent = '';
-    currentIndex = 0;
-    setTimeout(writeName, 500); // Adjust the delay before writing again
-}
-
-// Start the animation
-writeName();
+writeAndClearName();

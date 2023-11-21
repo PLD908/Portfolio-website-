@@ -7,31 +7,34 @@ body{
     color: white;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+    margin: 0;
 }
 nav{
     position: fixed;
     background-color: rgb(27, 24, 24);
-    margin: 0;
     top: 0;
     left: 0;
     width: 100%;
-    padding-left: 70px;
-    z-index: 100;
+    z-index: 2;
+    padding: 0 70px;
+}
+.container-fluid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .homePage{
     background-color: rgb(27, 24, 24);
-    padding: 20px 30px 200px 80px;
-    margin: -15px;
+    padding: 20px 80px 230px 80px;
 }
 .links > a{
     text-decoration: none;
     color: white;
     padding: 20px 30px;
-    margin-top: -60px;
+    /* margin-top: -60px; */
 }
 .links{
-    display: flex;
-    margin-left: 1000px;
+   /* margin-right: 80px; */
 }
 .links > a:hover{
     color: darkorange;
@@ -46,6 +49,12 @@ i{
 .content{
     margin-top: 200px;
     display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.textContent{
+    width: 45%;
 }
 .image{
     position: relative;
@@ -55,9 +64,9 @@ i{
     border-bottom-left-radius: 30%;
     border-bottom-right-radius: 30%;
     background-color: darkorange;
-    width: 370px;
+    width: 36%;
     height: 300px;
-    margin-left: 370px;
+    overflow: hidden;
 }
 .image > img{
     position: absolute;
@@ -82,10 +91,14 @@ div > a{
 }
 .aboutPage{
     display: flex;
-    
+    background-color: black;
+    padding: 250px 80px 270px 80px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .aboutMe{
-    margin-left: 400px;
+    width: 40%;
 }
 .aboutImage > img{
     position: absolute;
@@ -100,18 +113,13 @@ div > a{
     border-bottom-left-radius: 30%;
     border-bottom-right-radius: 30%;
     background-color: darkorange;
-    width: 720px;
+    width: 40%;
     height: 300px;
-}
-#about{
-    background-color: black;
-    padding: 250px 30px 270px 80px;
-    margin: -16px;
+    overflow: hidden;
 }
 #contact{
     background-color: black;
-    padding: 110px 30px 60px 80px;
-    margin: -16px;
+    padding: 100px 80px 80px 80px;
     text-align: center;
 }
 #contact > h1{
@@ -139,13 +147,16 @@ textarea{
     border-radius: 20px;
     background-color: rgb(27, 24, 24);
     padding: 15px;
-    font-size: 25px;
+    font-size: 26px;
 }
 #service{
     background-color: rgb(27, 24, 24);
-    padding: 190px 30px 185px 30px;
-    margin: -16px;
+    padding: 190px 80px 195px 80px;
     text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 .container{
     border-radius: 20px;
@@ -173,3 +184,13 @@ footer{
     float: right;
     width: 30px;
 }
+
+/* @media screen and (max-width: 820px) {
+    .content{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid rgb(0, 38, 255);
+    }
+} */
