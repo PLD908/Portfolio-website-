@@ -163,10 +163,14 @@ textarea{
     background-color: black;
     margin: 20px;
     padding: 30px;
+    width: 300px;
 }
 .card{
     display: flex;
     margin: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .container:hover{
     box-shadow: 0 0 10px darkorange;
