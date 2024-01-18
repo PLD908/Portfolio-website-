@@ -13,10 +13,10 @@ nav{
     position: fixed;
     background-color: rgb(27, 24, 24);
     top: 0;
-    left: 10px;
+    left: 0;
     width: 100%;
     z-index: 2;
-    padding: 0 70px;
+    padding: 5px 120px;
 }
 .container-fluid{
     display: flex;
@@ -43,43 +43,86 @@ i{
     margin-right: 25px;
 }
 .content{
-    margin-top: 200px;
+    margin-top: 140px;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 130px;
 }
 .textContent{
-    width: 45%;
+    width: 55%;
 }
 .image{
     position: relative;
     border: none;
-    border-top-right-radius: 30%;
-    border-top-left-radius: 30%;
-    border-bottom-left-radius: 30%;
-    border-bottom-right-radius: 30%;
-    background-color: darkorange;
-    width: 36%;
     height: 300px;
     overflow: hidden;
+    width: 36%;
 }
-.image > img{
-    position: absolute;
-    margin-left: 35px;
-    margin-top: 45px;
+.textContent h2{
+    font-size: 23px;
 }
 .name{
-    font-size: 50px;
+    font-size: 40px;
+    color: darkorange;
 }
 button{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: darkorange;
     border: none;
     border-radius: 20px;
-    font-size: 25px;
+    font-size: 20px;
     padding: 15px;
     margin-top: 20px;
     cursor: pointer;
+}
+.textContent span{
+    color: white;
+}
+.textContent button:hover{
+    animation: btn-rotate 0.7s ease-in-out both;
+}
+.textContent button:hover span {
+    animation: btn-storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+@keyframes btn-rotate {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+@keyframes btn-storm {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
 }
 div > a{
     text-decoration: none;
