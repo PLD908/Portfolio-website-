@@ -366,9 +366,29 @@ i{
 @media screen and (max-width: 900px) {
     .container-fluid i{
         display: block;
+        animation: drop 0.9s;
     }
     .links{
         display: none;
+    }
+    .content{
+        position: relative;
+    }
+    .content .image{
+        position: absolute;
+        border-radius: 50%;
+        height: 40%;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .content .textContent{
+        position: relative;
+        margin: 0 auto;
+        margin-top: 300px;
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%);
     }
 }
 @media screen and (max-width: 820px) {

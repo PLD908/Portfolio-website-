@@ -26,3 +26,9 @@ function writeAndClearName() {
 }
 
 writeAndClearName();
+
+let iconBar = document.getElementById('bar');
+
+iconBar.addEventListener('click', function() {
+    document.querySelector('.links').classList.toggle('animation');
+});
