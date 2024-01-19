@@ -21,7 +21,7 @@ nav{
     z-index: 2;
     padding: 5px 120px;
 }
-nav i{
+.container-fluid i{
     display: none;
 }
 .container-fluid{
@@ -363,8 +363,13 @@ i{
     width: 30px;
 }
 
-@media screen and (max-width: 820px) {
-
+@media screen and (max-width: 900px) {
+    .container-fluid i{
+        display: block;
+    }
+    .links{
+        display: none;
+    }
 }
 @media screen and (max-width: 820px) {
     .content{
