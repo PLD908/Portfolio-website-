@@ -29,6 +29,7 @@ writeAndClearName();
 
 let iconBar = document.getElementById('bar');
 let dropDown = document.querySelector('.links');
+let dropDownText = document.querySelectorAll('.link')
 
 iconBar.addEventListener('click', () => {
     if (window.innerWidth <= 900) {
@@ -36,4 +37,14 @@ iconBar.addEventListener('click', () => {
     } else {
         dropDown.classList.remove('show-dropdown');
     }
+});
+
+dropDownText.forEach((item) => {
+    item.addEventListener('click', function() {
+        if (dropDown.style.display === "none") {
+            dropDown.classList.toggle('show-dropdown');
+        } else {
+            dropDown.classList.remove('show-dropdown');
+        }
+    });
 });
