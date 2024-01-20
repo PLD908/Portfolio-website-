@@ -28,13 +28,12 @@ function writeAndClearName() {
 writeAndClearName();
 
 let iconBar = document.getElementById('bar');
-let dropDown = document.querySelector('.links')
-    dropDown.style.display = "none";
+let dropDown = document.querySelector('.links');
 
 iconBar.addEventListener('click', () => {
-    if (dropDown.style.display === "none") {
-        dropDown.style.display = "block"
+    if (window.innerWidth <= 900) {
+        dropDown.classList.toggle('show-dropdown');
     } else {
-        dropDown.style.display = "none"
+        dropDown.classList.remove('show-dropdown');
     }
 });
