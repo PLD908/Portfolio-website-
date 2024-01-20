@@ -546,10 +546,9 @@ i{
         margin-bottom: 1em;
     }
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 375px) {
     #project{
         padding: 6em 0 9.2em 0;
-        width: 100%;
     }
     .container{
         margin: 0;
