@@ -28,7 +28,13 @@ function writeAndClearName() {
 writeAndClearName();
 
 let iconBar = document.getElementById('bar');
+let dropDown = document.querySelector('.links')
+    dropDown.style.display = "none";
 
-iconBar.addEventListener('click', function() {
-    document.querySelector('.links').classList.toggle('animation');
+iconBar.addEventListener('click', () => {
+    if (dropDown.style.display === "none") {
+        dropDown.style.display = "block"
+    } else {
+        dropDown.style.display = "none"
+    }
 });
