@@ -2,12 +2,13 @@
 
 *{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 body{
     color: white;
     font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-    margin: 0;
+    overflow-x: none;
 }
 ::-webkit-scrollbar{
     width: 0;
@@ -32,6 +33,7 @@ nav{
 .homePage{
     background-color: rgb(27, 24, 24);
     padding: 20px 80px 150px 80px;
+    width: 100%;
 }
 .show-dropdown{
     display: block !important;
@@ -406,6 +408,7 @@ i{
     .content{
         position: relative;
         padding: 0 80px;
+        width: 100%;
     }
     .content .image{
         position: absolute;
@@ -432,6 +435,7 @@ i{
     }
     #technologies ul{
         display: block;
+        margin-left: -35px;
     }
     #technologies li{
         margin-bottom: 10px;
