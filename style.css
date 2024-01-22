@@ -53,6 +53,10 @@ nav{
 .links a:first-child{
     color: darkorange;
 }
+.links #cancel{
+    display: none;
+    color: white;
+}
 .content{
     display: flex;
     align-items: center;
@@ -231,7 +235,7 @@ span{
 }
 #projects{
     background-color: rgb(27, 24, 24);
-    padding: 100px 80px 150px 80px;
+    padding: 6.2em 4em 9.1em 4em;
     text-align: center;
     justify-content: space-between;
     align-items: center;
@@ -371,35 +375,40 @@ i{
     font-size: 1.3em;
 }
     .links{
-        position: absolute;
+        position: fixed;
         display: none;
         background-color: #e88a16;
-        right: 0;
-        top: 65%;
+        padding-top: 3.5em;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
         animation: drop 0.5s ease;
         transition: 0.5s ease-in-out;
+    }
+    .links #cancel{
+        display: block;
+        font-size: 2em;
+        float: right;
+        margin-top: -0.8em;
+        margin-right: 1.5em;
     }
     .links a:first-child{
         color: white;
     }
     @keyframes drop {
         from {
-            top: 0px;
-            opacity: 0.5;
-        }
-        70% {
-            top: 4em;
-            opacity: 0.1;
-            animation-timing-function: ease-in;
+            left: -100%;
+            opacity: 0.2;
         }
         to {
-            top: 3.8em;
-            animation-timing-function: ease-out;
+            left: 0;
+            animation-timing-function: ease-in-out;
         }
     }
     .links a{
-        font-size: 14px;
-        padding: 10px 30px;
+        font-size: 1.4em;
+        padding: 40px 60px;
         display: block;
     }
     .content{
@@ -546,12 +555,8 @@ i{
         margin-bottom: 1em;
     }
 }
-@media screen and (max-width: 375px) {
-    #project{
-        padding: 6em 0 9.2em 0;
-    }
-    .container{
-        margin: 0;
-        margin-bottom: 1.5em;
+@media screen and (max-width: 360px) {
+    .card{
+        flex-direction: column;
     }
 }

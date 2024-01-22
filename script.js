@@ -29,7 +29,8 @@ writeAndClearName();
 
 let iconBar = document.getElementById('bar');
 let dropDown = document.querySelector('.links');
-let dropDownText = document.querySelectorAll('.link')
+let dropDownText = document.querySelectorAll('.link');
+let cancelIcon = document.getElementById('cancel');
 
 iconBar.addEventListener('click', () => {
     if (window.innerWidth <= 900) {
@@ -48,3 +49,11 @@ dropDownText.forEach((item) => {
         }
     });
 });
+
+cancelIcon.addEventListener('click', () => {
+    if (dropDown.style.display === "none") {
+        dropDown.classList.toggle('show-dropdown');
+    } else {
+        dropDown.classList.remove('show-dropdown');
+    }
+})
