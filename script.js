@@ -32,28 +32,31 @@ let dropDown = document.querySelector('.links');
 let dropDownText = document.querySelectorAll('.link');
 let cancelIcon = document.getElementById('cancel');
 
+if (window.innerWidth <= 900) {
+    dropDown.style.display = "none";
+} else {
+    dropDown.style.display = "block";
+}
+
 iconBar.addEventListener('click', () => {
-    if (window.innerWidth <= 900) {
-        dropDown.classList.toggle('show-dropdown');
-    } else {
-        dropDown.classList.remove('show-dropdown');
+    if (dropDown.style.display === "none") {
+        dropDown.classList.toggle("open");
+        dropDown.style.display = "block";
+    } else{
+        dropDown.style.display = "none";
     }
 });
 
 dropDownText.forEach((item) => {
     item.addEventListener('click', function() {
-        if (dropDown.style.display === "none") {
-            dropDown.classList.toggle('show-dropdown');
-        } else {
-            dropDown.classList.remove('show-dropdown');
+        if (dropDown.style.display === "block") {
+            dropDown.style.display = "none";
         }
     });
 });
 
 cancelIcon.addEventListener('click', () => {
-    if (dropDown.style.display === "none") {
-        dropDown.classList.toggle('show-dropdown');
-    } else {
-        dropDown.classList.remove('show-dropdown');
+    if (dropDown.style.display === "block") {
+        dropDown.classList.toggle('go-back');
     }
-})
+});

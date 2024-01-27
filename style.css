@@ -35,11 +35,8 @@ nav{
 }
 .homePage{
     background-color: rgb(27, 24, 24);
-    padding: 1.25em 3em 9.37em 3em;
+    padding: 1.25em 3em 5em 3em;
     width: 100%;
-}
-.show-dropdown{
-    display: block !important;
 }
 .links a{
     text-decoration: none;
@@ -147,12 +144,12 @@ div > a{
 }
 .aboutPage{
     background-color: black;
-    padding: 6.25em 5em 11.25em 5em;
+    padding: 5em;
     text-align: center;
 }
 .aboutMe{
     margin: 0 auto;
-    width: 40%;
+    width: 60%;
 }
 .aboutMe h1{
     font-size: 1.3em;
@@ -235,7 +232,7 @@ span{
 }
 #projects{
     background-color: rgb(27, 24, 24);
-    padding: 6.2em 4em 9.1em 4em;
+    padding: 5em;
     text-align: center;
     justify-content: space-between;
     align-items: center;
@@ -376,7 +373,6 @@ i{
 }
     .links{
         position: fixed;
-        display: none;
         background-color: #e88a16;
         padding-top: 3.5em;
         left: 0;
@@ -384,7 +380,11 @@ i{
         width: 100%;
         height: 100%;
         animation: drop 0.5s ease;
-        transition: 0.5s ease-in-out;
+        transition: aLl 0.5s ease-in-out;
+        /* transform: translateX(-100%); */
+    }
+    .links.open{
+        transform: translateX(0);
     }
     .links #cancel{
         display: block;
@@ -405,6 +405,11 @@ i{
             left: 0;
             animation-timing-function: ease-in-out;
         }
+    }
+    .links.go-back{
+        transition: 0.5s ease-in-out;
+        transform: translateX(-100%);
+        opacity: 0.2;
     }
     .links a{
         font-size: 1.4em;
