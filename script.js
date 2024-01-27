@@ -40,9 +40,10 @@ if (window.innerWidth <= 900) {
 
 iconBar.addEventListener('click', () => {
     if (dropDown.style.display === "none") {
-        dropDown.classList.toggle("open");
         dropDown.style.display = "block";
-    } else{
+    } else if (dropDown.style.display === "block"){
+        dropDown.classList.add("hidden");
+    } else {
         dropDown.style.display = "none";
     }
 });
@@ -57,6 +58,7 @@ dropDownText.forEach((item) => {
 
 cancelIcon.addEventListener('click', () => {
     if (dropDown.style.display === "block") {
-        dropDown.classList.toggle('go-back');
+        dropDown.classList.toggle("open");
+        // dropDown.style.display = "none";
     }
 });

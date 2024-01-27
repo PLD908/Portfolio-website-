@@ -381,10 +381,15 @@ i{
         height: 100%;
         animation: drop 0.5s ease;
         transition: aLl 0.5s ease-in-out;
-        /* transform: translateX(-100%); */
     }
     .links.open{
-        transform: translateX(0);
+        transition: 0.5s ease-in-out;
+        transform: translateX(-100%);
+        opacity: 0.2;
+        display: none;
+    }
+    .hidden{
+        transform: translateX(100%);
     }
     .links #cancel{
         display: block;
