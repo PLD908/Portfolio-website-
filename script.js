@@ -32,33 +32,23 @@ let dropDown = document.querySelector('.links');
 let dropDownText = document.querySelectorAll('.link');
 let cancelIcon = document.getElementById('cancel');
 
+// Initial state for small screens
 if (window.innerWidth <= 900) {
-    dropDown.style.display = "none";
+    dropDown.style.transform = "translateX(-100%)";
 } else {
-    dropDown.style.display = "block";
+    dropDown.style.transform = "translateX(0)";
 }
 
 iconBar.addEventListener('click', () => {
-    if (dropDown.style.display === "none") {
-        dropDown.style.display = "block";
-    } else if (dropDown.style.display === "block"){
-        dropDown.classList.add("hidden");
-    } else {
-        dropDown.style.display = "none";
-    }
+    dropDown.style.transform = "translateX(0%)";
 });
 
 dropDownText.forEach((item) => {
     item.addEventListener('click', function() {
-        if (dropDown.style.display === "block") {
-            dropDown.style.display = "none";
-        }
+        dropDown.style.transform = "translateX(-100%)";
     });
 });
 
 cancelIcon.addEventListener('click', () => {
-    if (dropDown.style.display === "block") {
-        // dropDown.classList.toggle("close");
-        dropDown.style.display = "none";
-    }
+    dropDown.style.transform = "translateX(-100%)";
 });
