@@ -382,11 +382,10 @@ i{
         animation: drop 0.5s ease;
         transition: aLl 0.5s ease-in-out;
     }
-    .links.open{
+    .links.close{
         transition: 0.5s ease-in-out;
-        transform: translateX(-100%);
+        /* transform: translateX(-100%); */
         opacity: 0.2;
-        display: none;
     }
     .hidden{
         transform: translateX(100%);
@@ -410,11 +409,6 @@ i{
             left: 0;
             animation-timing-function: ease-in-out;
         }
-    }
-    .links.go-back{
-        transition: 0.5s ease-in-out;
-        transform: translateX(-100%);
-        opacity: 0.2;
     }
     .links a{
         font-size: 1.4em;

@@ -58,7 +58,7 @@ dropDownText.forEach((item) => {
 
 cancelIcon.addEventListener('click', () => {
     if (dropDown.style.display === "block") {
-        dropDown.classList.toggle("open");
-        // dropDown.style.display = "none";
+        // dropDown.classList.toggle("close");
+        dropDown.style.display = "none";
     }
 });
